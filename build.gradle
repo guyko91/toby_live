@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'org.springframework.boot:spring-boot-starter:2.5.3'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.5.3'
+
+    implementation 'org.reactivestreams:reactive-streams:1.0.3'
+
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
